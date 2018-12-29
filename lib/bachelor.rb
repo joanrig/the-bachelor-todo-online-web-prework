@@ -17,6 +17,7 @@ require "pry"
 #         "occupation":"Chiropractic Assistant",
 #         "status":""
 #       },
+<<<<<<< HEAD
   #   ]
   # }
 
@@ -32,6 +33,20 @@ def get_first_name_of_season_winner(data, season)
     end
   end
   #binding.pry    
+=======
+
+
+def get_first_name_of_season_winner(data, season)
+  winner_name = []
+  data.each do |season_id, contestant_hash|
+      if season == season_id
+        if [:status] == "winner"
+          return [:name].to_s.split.first
+        end
+      end
+  end
+  binding.pry    
+>>>>>>> c609e2aa072c77d1b3a6244e0ed816f8739abc17
 end
 
 def get_contestant_name(data, occupation)
